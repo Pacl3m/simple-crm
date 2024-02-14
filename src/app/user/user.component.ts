@@ -12,14 +12,14 @@ import { FirestoreService } from '../firebase-service/firebase.service';
 export class UserComponent implements OnInit {
 
   constructor(public dialog: MatDialog,
-    public firestoreService: FirestoreService,) { }
+    public firestoreService: FirestoreService) { }
 
   ngOnInit(): void {
 
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogAddUserComponent);
+    this.dialog.open(DialogAddUserComponent);
   }
 
   onNoClick() {

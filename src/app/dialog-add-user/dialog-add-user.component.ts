@@ -29,7 +29,6 @@ export class DialogAddUserComponent {
       this.user.birthDate = this.birthDate.getTime();
     }
     let userJson = this.toJSON(this.user);
-    console.log(userJson);
     this.firestoreService.saveInFirestore(userJson);
     setTimeout(() => {
       this.loading = false;
